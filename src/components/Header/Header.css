@@ -1,0 +1,21 @@
+.nav {
+    margin: 20px 10px;
+    text-align: center;
+    /* border: solid 1px rebeccapurple; */
+}
+
+.nav a {
+    /* border: solid 1px rebeccapurple; */
+    padding: 5px 10px;
+    margin: 5px;
+    border: solid 2px skyblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav a:link{
+    text-decoration: none;
+}
+
+.active{
+    background-color: aqua;
+}
