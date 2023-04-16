@@ -7,9 +7,10 @@ const Header = () => {
         {id: 1, path: '/', title: 'Home'},
         {id: 2, path: '/about', title: 'About Us'},
         {id: 3, path: '/login', title: 'Log In'},
+        {id: 4, path: '/register_rbs', title: 'Register RBS'},
     ]
     return (
-        <nav className='nav'>
+        <nav className='nav w-75 mx-auto'>
             {
                 navBars.map(nav => <NavLink
                     className={
@@ -17,7 +18,7 @@ const Header = () => {
                             isPending ?
                                 "pending"
                                 :
-                                isActive ? "active" : ""
+                                isActive ? "active" : "inactive"
                     }
                     key={nav.id} to={nav.path}>{nav.title}</NavLink>)
             }

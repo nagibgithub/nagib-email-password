@@ -1,14 +1,16 @@
 .nav {
-    margin: 20px 10px;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
     text-align: center;
+
     /* border: solid 1px rebeccapurple; */
 }
 
 .nav a {
     /* border: solid 1px rebeccapurple; */
-    padding: 5px 10px;
-    margin: 5px;
-    border: solid 2px skyblue;
+    padding: 5px 15px;
+    margin: 5px 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -17,5 +19,21 @@
 }
 
 .active{
-    background-color: aqua;
+    
+    border-right: solid 2px skyblue;
+    border-top: solid 2px skyblue;
+    border-left: solid 2px skyblue;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    
+}
+
+.inactive{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top: solid 2px white;
+    border-left: solid 2px white;
+    border-right: solid 2px white;
+    border-bottom: solid 2px skyblue;
+
 }

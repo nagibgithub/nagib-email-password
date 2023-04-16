@@ -26,7 +26,7 @@ const Login = () => {
 
     return (
         <form onSubmit={formSubmit} action="" className='login'>
-            <h1 name='title'>Please Log in by your email and pass</h1>
+            <h5 name='title'>Please Log in by your email and pass</h5>
             <input onChange={emailChange} type="email" name='email' id="email-field" placeholder='Enter Your Email' />
             <br />
             <input onBlur={onBlurPass} type="password" name="pass" id="password-field" placeholder='Enter Your Password' />
