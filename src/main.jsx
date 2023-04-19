@@ -7,6 +7,7 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Login from './components/Login/Login';
 import RegisterRBS from './components/RegisterRBS/RegisterRBS';
+import Profile from './components/Profile/Profile';
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/register_rbs",
         element: <RegisterRBS></RegisterRBS>
+      },
+      {
+        path: "/profile",
+        element: <Profile></Profile>
       }
     ]
   },

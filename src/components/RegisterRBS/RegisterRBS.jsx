@@ -23,7 +23,9 @@ const RegisterRBS = () => {
                     </div>
                 </div>
                 <br />
-                <input className='py-2 w-full rounded-md text-white font-bold bg-gradient-to-r from-sky-400 to-purple-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer' type="submit" />
+                <div className='w-full flex'>
+                    <input className='py-2 w-1/2 active:w-5/12 m-auto text-white font-bold bg-gradient-to-r from-sky-400 to-purple-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer border-t-8 border-b-8 border-transparent active:border-white' type="submit" />
+                </div>
             </form>
         </div>
     );
