@@ -1,31 +1,31 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import React, {useState} from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faCoffee, faEyeSlash, faEye, faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
 const RegisterRBS = () => {
-    return (
-        <>
-            <Form>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
-                    <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                    </Form.Text>
-                </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
-            </Form>
-        </>
+    const [type, setType] = useState(true)
+
+    return (
+        <div className='md:w-3/4 lg:w-1/2 xl:w-7/12 m-auto rounded-lg shadow-2xl shadow-sky-300'>
+            <h1 className='m-auto text-center border-2 border-sky-100 border-b-0 py-2 font-bold text-lg rounded-t-lg'>Sigh Up Form</h1>
+            <form action="" className='m-auto border-2 rounded-b-lg border-sky-100 p-6'>
+                <div className='sm:grid sm:grid-cols-5 sm:items-center'>
+                    <label className='col-span-1' for='email' >Email Address: </label>
+                    <input className='col-span-4 pl-3  py-2 border-2 border-sky-200 focus:outline-2 focus:outline-sky-500 bg-sky-50 rounded-lg' name='email' id='email' type="email" placeholder='Your email @' required />
+                </div>
+                <br />
+                <div className='grid grid-cols-5 items-center'>
+                    <label className='col-span-1' for='password'>Password: </label>
+                    <div className='flex items-center col-span-4'>
+                        <input className='w-full pl-3 py-2 border-2 border-sky-200 focus:outline-2 focus:outline-sky-500 bg-sky-50 rounded-lg' name='password' id='password' type={type ? 'password' : 'text'} placeholder='Type a password' required />
+                        <div className='ml-1 cursor-pointer w-12 h-11 rounded-full flex justify-center items-center border-2 bg-sky-50 border-sky-200 text-sky-500 active:border-sky-500' onPointerLeave={() => setType(true)} onPointerDown={() => setType(false)} onPointerUp={() => setType(true)} >{type ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}</div>
+                    </div>
+                </div>
+                <br />
+                <input className='py-2 w-full rounded-md text-white font-bold bg-gradient-to-r from-sky-400 to-purple-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer' type="submit" />
+            </form>
+        </div>
     );
 };
 
